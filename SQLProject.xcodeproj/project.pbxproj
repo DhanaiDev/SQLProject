@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B14A274A81108C6D5E1F292C /* Pods_SQLProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F50AF423209A3AEF1FE979 /* Pods_SQLProject.framework */; };
+		B545902D27031BD500411E89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545902C27031BD500411E89 /* User.swift */; };
+		B5AB2F4327021FCF00ACB468 /* SQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB2F4227021FCF00ACB468 /* SQLManager.swift */; };
 		B5D864C126FE196C00CAB467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D864C026FE196C00CAB467 /* AppDelegate.swift */; };
 		B5D864C326FE196C00CAB467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D864C226FE196C00CAB467 /* SceneDelegate.swift */; };
 		B5D864C526FE196C00CAB467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D864C426FE196C00CAB467 /* ViewController.swift */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24F50AF423209A3AEF1FE979 /* Pods_SQLProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A36057E6076202BD882432E /* Pods-SQLProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLProject.debug.xcconfig"; path = "Target Support Files/Pods-SQLProject/Pods-SQLProject.debug.xcconfig"; sourceTree = "<group>"; };
+		ADE219E9473FDD4D76AA71CA /* Pods-SQLProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLProject.release.xcconfig"; path = "Target Support Files/Pods-SQLProject/Pods-SQLProject.release.xcconfig"; sourceTree = "<group>"; };
+		B545902C27031BD500411E89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B5AB2F4227021FCF00ACB468 /* SQLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLManager.swift; sourceTree = "<group>"; };
 		B5D864BD26FE196C00CAB467 /* SQLProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D864C026FE196C00CAB467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D864C226FE196C00CAB467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +39,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B14A274A81108C6D5E1F292C /* Pods_SQLProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EEACF637BEFB8C605DCCA3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A36057E6076202BD882432E /* Pods-SQLProject.debug.xcconfig */,
+				ADE219E9473FDD4D76AA71CA /* Pods-SQLProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5DB1C3735A9C3F0905527639 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24F50AF423209A3AEF1FE979 /* Pods_SQLProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5AB2F4127021FBB00ACB468 /* SQL */ = {
+			isa = PBXGroup;
+			children = (
+				B5AB2F4227021FCF00ACB468 /* SQLManager.swift */,
+				B545902C27031BD500411E89 /* User.swift */,
+			);
+			path = SQL;
+			sourceTree = "<group>";
+		};
 		B5D864B426FE196C00CAB467 = {
 			isa = PBXGroup;
 			children = (
 				B5D864BF26FE196C00CAB467 /* SQLProject */,
 				B5D864BE26FE196C00CAB467 /* Products */,
+				1EEACF637BEFB8C605DCCA3A /* Pods */,
+				5DB1C3735A9C3F0905527639 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +96,7 @@
 				B5D864C026FE196C00CAB467 /* AppDelegate.swift */,
 				B5D864C226FE196C00CAB467 /* SceneDelegate.swift */,
 				B5D864C426FE196C00CAB467 /* ViewController.swift */,
+				B5AB2F4127021FBB00ACB468 /* SQL */,
 				B5D864C626FE196C00CAB467 /* Main.storyboard */,
 				B5D864C926FE197000CAB467 /* Assets.xcassets */,
 				B5D864CB26FE197000CAB467 /* LaunchScreen.storyboard */,
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5D864D126FE197000CAB467 /* Build configuration list for PBXNativeTarget "SQLProject" */;
 			buildPhases = (
+				D52A9BE085C4FB7F66977578 /* [CP] Check Pods Manifest.lock */,
 				B5D864B926FE196C00CAB467 /* Sources */,
 				B5D864BA26FE196C00CAB467 /* Frameworks */,
 				B5D864BB26FE196C00CAB467 /* Resources */,
+				AB7A1F366EC98539CA9E47F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +172,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB7A1F366EC98539CA9E47F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SQLProject/Pods-SQLProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SQLProject/Pods-SQLProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SQLProject/Pods-SQLProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D52A9BE085C4FB7F66977578 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SQLProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5D864B926FE196C00CAB467 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +221,8 @@
 			files = (
 				B5D864C526FE196C00CAB467 /* ViewController.swift in Sources */,
 				B5D864C126FE196C00CAB467 /* AppDelegate.swift in Sources */,
+				B5AB2F4327021FCF00ACB468 /* SQLManager.swift in Sources */,
+				B545902D27031BD500411E89 /* User.swift in Sources */,
 				B5D864C326FE196C00CAB467 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +367,7 @@
 		};
 		B5D864D226FE197000CAB467 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A36057E6076202BD882432E /* Pods-SQLProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +387,7 @@
 		};
 		B5D864D326FE197000CAB467 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADE219E9473FDD4D76AA71CA /* Pods-SQLProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
